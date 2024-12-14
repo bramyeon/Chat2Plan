@@ -1,3 +1,9 @@
+---
+title: Chat2Plan
+app_file: gradioMain.py
+sdk: gradio
+sdk_version: 5.8.0
+---
 # Chat2Plan: Course Planner Chatbot for KAIST SoC Students
 
 ```
