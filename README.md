@@ -43,7 +43,7 @@ Alternatively, run Chat2Plan using Gradio by executing the Python file:
 python gradioMain.py
 ```
 
-Doing so will print out some output to your terminal. Copy and paste one of the outputted links, which should look something like the following.
+Doing so will print out some output to your terminal. Copy and paste one of the outputted links to your web browser. The links should look something like the following.
 ```
 * Running on local URL:  http://127.0.0.1:7860
 * Running on public URL: https://573ff216ca1b225ba6.gradio.live
