@@ -76,9 +76,9 @@ askMCIter([CourseNumSub|T]):-
         string_concat(TitleStr2,')',TitleStr),!
     ;
         extractFirstWord(UpperNum,CourseNum),
-        string_concat(CourseTitle,'<',TitleStr1),
+        string_concat(CourseTitle,': ',TitleStr1),
         string_concat(TitleStr1,CourseSubtitle,TitleStr2),
-        string_concat(TitleStr2,'> (',TitleStr3),
+        string_concat(TitleStr2,' (',TitleStr3),
         string_concat(TitleStr3,CourseNum,TitleStr4),
         string_concat(TitleStr4,')',TitleStr)
     ),

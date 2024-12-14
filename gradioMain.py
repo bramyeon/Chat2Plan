@@ -2,7 +2,7 @@
 Following the chatbot function format in Gradio,
 we implement Chat2Plan for Gradio by considering the system
 as a finite-state machine, where user answers determine the 
-next state of the system. We have five main ststes with multiple
+next state of the system. We have five main states with multiple
 substates signifying the progress within each state.
 
 - Initialize: 4 sub-states 
@@ -246,7 +246,7 @@ def courseRecommendation(msg):
     elif SUBTASK_CODE==2:
         try:
             COURSE_LIST = [elem['FinCourses'] for elem in prolog.query(f"filterKeyRecomGradio({message},{COURSE_LIST},FinCourses)")][0]
-            courseStr = [str(elem['CourseStr']) for elem in prolog.query(f"retrieveCourseGradio({COURSE_LIST[0]},CourseStr)")][0]
+            courseStr = [str(elem['CourseStr']) for elem in prolog.query(f"retrieveCourseGradio('{COURSE_LIST[0]}',CourseStr)")][0]
             replyStr = f'{courseStr[2:-1]}'
             COURSE_LIST = COURSE_LIST[1:]
             SUBTASK_CODE=3
@@ -259,7 +259,7 @@ def courseRecommendation(msg):
         try:
             if 'yes' in message or 'y' in message:
                 if len(COURSE_LIST) > 0:
-                    courseStr = [str(elem['CourseStr']) for elem in prolog.query(f"retrieveCourseGradio({COURSE_LIST[0]},CourseStr)")][0]
+                    courseStr = [str(elem['CourseStr']) for elem in prolog.query(f"retrieveCourseGradio('{COURSE_LIST[0]}',CourseStr)")][0]
                     replyStr = f'{courseStr[2:-1]}'
                     COURSE_LIST = COURSE_LIST[1:]
                     TASK_CODE=3
@@ -341,17 +341,8 @@ if __name__=='__main__':
         chat2plan,
         type="messages",
         chatbot=gr.Chatbot(height=500),
-        textbox=gr.Textbox(placeholder="Ask me a yes or no question", container=False, scale=7),
+        textbox=gr.Textbox(placeholder="Say anything to start conversation", container=True, scale=7),
         title="Chat2Plan",
         description="Chat2Plan: Course Planner Chatbot for KAIST SoC Students",
-        theme="ocean",
-        # examples=examples,
-        # cache_examples=True,
+        theme="ocean"
     ).launch(share=True)
-    
-    # while True:
-    #     msg = input()
-    #     reply = chat2plan(msg,None)
-    #     print()
-    #     print(reply)
-    #     print()
