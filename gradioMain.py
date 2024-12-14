@@ -340,7 +340,7 @@ if __name__=='__main__':
     gr.ChatInterface(
         chat2plan,
         type="messages",
-        chatbot=gr.Chatbot(height=500),
+        chatbot=gr.Chatbot(height=500,type="messages"),
         textbox=gr.Textbox(placeholder="Say anything to start conversation", container=True, scale=7),
         title="Chat2Plan",
         description="Chat2Plan: Course Planner Chatbot for KAIST SoC Students",
