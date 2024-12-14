@@ -44,3 +44,24 @@ Doing so will print out some output to your terminal. Copy and paste one of the 
 ```
 
 You can then use Chat2Plan to plan your courses! To initiate the interaction, say anything to the chatbot :-)
+
+## Remarks
+
+Important files for this project (those implemented outside BB1):
+- Course knowledge base 
+   - `courseKB.pl`: Course knowledge base
+   - `preprocess.ipynb`: Course knowledge base preprocessing notebook
+
+- Chat2Plan features and interactions
+   - `main.py`: Main predicates for Chat2Plan in SWI-Prolog
+   - `coursePlanning.pl`: Helper predicates for feature 1 (course planning)
+   - `loadApproximation.pl`: Helper predicates for feature 2 (load approximation)
+   - `courseRecommendation.pl`: Helper predicates for feature 3 (course recommendation)
+   - `courseInformation.pl`: Helper predicates for feature 4 (course information)
+   - `englishLexicon.pl`: Registered lexicons for Chat2Plan lambda calculus-based representations
+   
+- Integration with Gradio
+   - `gradioMain.py`: Main functions for running Chat2Plan with Gradio chatbot
+   - `gradioHelper.pl`: Helper functions for Chat2Plan with Gradio due to the restrictions and I/O specifications in `pyswip` and `gradio`
+   
+
