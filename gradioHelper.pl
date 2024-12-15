@@ -4,7 +4,7 @@ Main Script for CS579 Term Project (Fall 2024) - GRADIO VERSION
 Project Title: 'Chat2Plan: Course Planner Chatbot for KAIST SoC Students'
 
 The predicates here are adapted from our main source codes simply to be used 
-in the Gradio UI because pyswipl does not support capturing inputs from readLine/1
+in the Gradio UI because pyswip does not support capturing inputs from readLine/1
 and its variations and forwarding strings outputted from write/1 and format/2, 
 also to adjust with the format requirements of Gradio Chatbot. 
 No "new" operations are defined, so the output of the systems in main.pl and
