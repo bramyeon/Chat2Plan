@@ -54,8 +54,7 @@ askList(Sems):-
 
 
 /*========================================================================
-   Ask for the user's list of courses to take 
-   (course number, or together with subtitle for special topics)
+   Accumulate the number of courses being taken and the cumulative load
 ========================================================================*/
 
 filterList([Sems],CourseNums,Load):-
